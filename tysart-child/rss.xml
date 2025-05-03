@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <!-- Основная информация о сайте/канале -->
+  <title>TysArtPro</title>
+  <link>https://tysart.pro/</link>
+  <description>Сайт художника по свету и ведеографа</description>
+  <language>ru</language>
+  <atom:link href="https://tysart.pro/rss.xml" rel="self" type="application/rss+xml" />
+  
+  <!-- Необязательные элементы -->
+  <copyright>© 2025 ИП Тыщенко Артём Иванович</copyright>
+  <lastBuildDate>Sat, 03 May 2025 12:00:00 +0300</lastBuildDate>
+  <pubDate>Sat, 03 May 2025 12:00:00 +0300</pubDate>
+  <generator>-</generator>
+  <image>
+    <url>~/www/tysart.pro/wp-content/themes/tysart-child/logo.png</url>
+    <title>TysArtPro</title>
+    <link>https://tysart.pro/</link>
+  </image>
+  
+  <!-- Первая запись -->
+  <item>
+    <title>Свадебная съемка</title>
+    <link>https://ваш-сайт.ru/статья1</link>
+    <guid isPermaLink="true">https://ваш-сайт.ru/статья1</guid>
+    <description><![CDATA[
+      Текст первой записи. Здесь вы можете использовать HTML-разметку, 
+      например <strong>жирный текст</strong>, <em>курсив</em>, 
+      <a href="https://ваш-сайт.ru">ссылки</a> и другие элементы.
+      
+      Для добавления абзацев используйте теги <p>параграф</p>.
+    ]]></description>
+    <pubDate>Sat, 03 May 2025 10:00:00 +0300</pubDate>
+    <category>Категория 1</category>
+    <category>Метка 1</category>
+  </item>
+  
+  <!-- Вторая запись -->
+  <item>
+    <title>Заголовок второй записи</title>
+    <link>https://ваш-сайт.ru/статья2</link>
+    <guid isPermaLink="true">https://ваш-сайт.ru/статья2</guid>
+    <description><![CDATA[
+      Текст второй записи. Вы можете вставить сюда любой контент, 
+      включая изображения:
+      <img src="https://ваш-сайт.ru/images/фото.jpg" alt="Описание фото" />
+      
+      Или добавить списки:
+      <ul>
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+      </ul>
+    ]]></description>
+    <pubDate>Fri, 02 May 2025 15:30:00 +0300</pubDate>
+    <category>Категория 2</category>
+  </item>
+  
+  <!-- Добавляйте новые записи здесь -->
+  <!-- 
+  <item>
+    <title>Заголовок новой записи</title>
+    <link>https://ваш-сайт.ru/новая-статья</link>
+    <guid isPermaLink="true">https://ваш-сайт.ru/новая-статья</guid>
+    <description><![CDATA[
+      Текст вашей новой записи.
+    ]]></description>
+    <pubDate>День, ДД Месяц ГГГГ ЧЧ:ММ:СС +0300</pubDate>
+    <category>Категория</category>
+  </item>
+  -->
+  
+</channel>
+</rss>

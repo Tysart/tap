@@ -1,0 +1,89 @@
+#portfolio .video:hover ~ #about,
+#portfolio .video:hover ~ #services,
+#portfolio .video:hover ~ #blog,
+#portfolio .video:hover ~ #contacts {
+ opacity:0.3;
+ transition: opacity0.3s ease;
+}
+
+#portfolio .video {
+ transition: transform0.3s ease, z-index0.3s ease;
+ z-index:1;
+}
+
+#portfolio .video:hover {
+ transform: scale(1.1);
+ z-index:10;
+}
+
+#portfolio .iframe-container {
+ transition: all0.3s ease;
+}
+
+#portfolio .video:hover .iframe-container {
+ box-shadow:015px 40px rgba(212,175,55,0.4);
+}
+/* Эффект размытия при загрузке и фокусировка */
+#hero video.blur-in {
+    filter: blur(10px);
+    transition: filter 1.5s ease;
+}
+
+#hero video.blur-in.loaded {
+    filter: blur(0);
+}
+
+/* Эффект градиентного наложения вместо простого затемнения */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+    z-index: 0;
+}
+
+/* Эффект параллакса для видео в hero-секции */
+.parallax-video {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-out;
+}
+
+/* Анимация для контейнеров с видео */
+@keyframes pulse {
+    0% { box-shadow: 0 10px 30px rgba(139, 30, 30, 0.3); }
+    50% { box-shadow: 0 15px 40px rgba(139, 30, 30, 0.5); }
+    100% { box-shadow: 0 10px 30px rgba(139, 30, 30, 0.3); }
+}
+
+#portfolio .video .iframe-container {
+    animation: pulse 3s infinite;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .video .iframe-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Стилизация элементов управления видео (если они активны) */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+video:hover::-webkit-media-controls {
+    opacity: 1;
+}
+
+/* Эффект скорости воспроизведения */
+.speed-effect {
+    animation: speedEffect 10s infinite alternate;
+}
+
+@keyframes speedEffect {
+    0% { playbackRate: 0.8; }
+    100% { playbackRate: 1.2; }
+}

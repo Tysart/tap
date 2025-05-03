@@ -1,0 +1,474 @@
+/* Reset и основные стили */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* Базовые стили для body */
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Сброс для списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Сброс для таблиц */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Сброс для ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Сброс для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Сброс для форм */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/* Стили для всей секции контактов */
+.contacts-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+/* Контактная информация */
+.contacts-info {
+    margin-bottom: 30px;
+}
+
+.contacts-info a {
+    display: block;
+    color: #ff4d4d;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contacts-info a:hover {
+    color: #ff6666;
+    text-decoration: underline;
+}
+
+/* Стили формы */
+.contact-form {
+    max-width: 500px;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ff3333;
+    transform: translateY(-2px);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contacts-info a {
+        font-size: 16px;
+    }
+}
+/* Стили для всей секции контактов */
+.contacts-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+/* Контактная информация */
+.contacts-info {
+    margin-bottom: 30px;
+}
+
+.contacts-info a {
+    display: block;
+    color: #ff4d4d;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contacts-info a:hover {
+    color: #ff6666;
+    text-decoration: underline;
+}
+
+/* Стили формы */
+.contact-form {
+    max-width: 500px;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ff3333;
+    transform: translateY(-2px);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contacts-info a {
+        font-size: 16px;
+    }
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Затемняющий оверлей для всей страницы */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+/* Эффекты при наведении */
+.video-container:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container:hover ~ .page-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Опциональный эффект свечения при наведении */
+.video-container:hover .video-wrapper {
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+}
+
+/* Стили для адаптивности */
+@media (max-width: 768px) {
+  .video-container:hover {
+    transform: scale(1.03); /* Меньше увеличение на мобильных */
+  }
+}
+/* Эффект размытия при загрузке и фокусировка */
+#hero video.blur-in {
+    filter: blur(10px);
+    transition: filter 1.5s ease;
+}
+
+#hero video.blur-in.loaded {
+    filter: blur(0);
+}
+
+/* Эффект градиентного наложения вместо простого затемнения */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+    z-index: 0;
+}
+
+/* Эффект параллакса для видео в hero-секции */
+.parallax-video {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-out;
+}
+
+/* Анимация для контейнеров с видео */
+@keyframes pulse {
+    0% { box-shadow: 0 10px 30px rgba(139, 30, 30, 0.3); }
+    50% { box-shadow: 0 15px 40px rgba(139, 30, 30, 0.5); }
+    100% { box-shadow: 0 10px 30px rgba(139, 30, 30, 0.3); }
+}
+
+#portfolio .video .iframe-container {
+    animation: pulse 3s infinite;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .video .iframe-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Стилизация элементов управления видео (если они активны) */
+video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+video:hover::-webkit-media-controls {
+    opacity: 1;
+}
+
+/* Эффект скорости воспроизведения */
+.speed-effect {
+    animation: speedEffect 10s infinite alternate;
+}
+
+@keyframes speedEffect {
+    0% { playbackRate: 0.8; }
+    100% { playbackRate: 1.2; }
+}
+.message {
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+.message.success {
+    background-color: #1a1a1a;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+.message.error {
+    background-color: #1a1a1a;
+    border: 2px solid #8B1E1E;
+    color: #f5f5f5;
+}
+#form-success .message {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#form-success .message.success {
+    background-color: #1A1A1A;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+
+#form-success .message.error {
+    background-color: #1A1A1A;
+    border: 2px solid #8B1E1E;
+    color: #F5F5F5;
+}
+.message {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #1A1A1A;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.message.success {
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+
+.message.error {
+    border: 2px solid #8B1E1E;
+    color: #F5F5F5;
+}
+.message {
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.message.success {
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+}
+.message.error {
+  border: 2px solid #8B1E1E;
+  color: #F5F5F5;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.video-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0,0,0,0));
+  z-index: 1;
+  pointer-events: none;
+}
+#form-success {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+#form-success.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.video-filters button {
+  margin: 5px;
+  padding: 8px 14px;
+  background: none;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  font-family: 'Inter', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.video-filters button:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
