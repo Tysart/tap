@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+
 /* Перекрытие фона */
 #videoOverlay {
   position: fixed;
@@ -811,6 +812,24 @@ section::before {
 @keyframes spin-rays {
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
+.page-blurred {
+    filter: blur(3px);
+    opacity: 0.5;
+    transition: filter 0.5s, opacity 0.5s;
+}
+
+/* Активированное видео находится поверх других элементов */
+.video-container.is-expanded {
+    position: absolute;
+    top: 50%; /* Центрирование вертикально */
+    left: 50%; /* Центрирование горизонтально */
+    transform: translate(-50%, -50%) scale(1.5); /* Увеличено до 70% экрана */
+    z-index: 9999;
+    width: 70vw; /* Ширина видео */
+    height: calc(70vw * 9/16); /* Соотношение сторон 16:9 */
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(.2,.85,.31,1);
+}
 
 </style>
 
@@ -990,14 +1009,14 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>Pressmash</p>
   </div>
 
-  <div class="video fade-in" data-category="свадебное свадебные-фильмы событийное all">
+  <div class="video fade-in" data-category="свадебные-тизеры свадебное событийное all">
     <div class="iframe-container">
       <iframe src="https://player.vimeo.com/video/1059244427" loading="lazy"></iframe>
     </div>
     <p>Никита и Инна</p>
   </div>
 
-  <div class="video fade-in" data-category="арт визуальное all">
+  <div class="video fade-in" data-category="детские all">
     <div class="iframe-container">
       <iframe src="https://storage.yandexcloud.net/ftp-upload/2024/11/2024-11-19_13_32_GXKYAZNAYPOZN03.mp4" loading="lazy"></iframe>
     </div>
@@ -1018,21 +1037,21 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>Master</p>
   </div>
 
-  <div class="video fade-in" data-category="клипы музыкальные all">
+  <div class="video fade-in" data-category="клипы all">
     <div class="iframe-container">
       <iframe src="https://rutube.ru/play/embed/a565c56ccdaebafc614cad9eb3cc430b/" loading="lazy"></iframe>
     </div>
     <p>Клип TVRCH</p>
   </div>
 
-  <div class="video fade-in" data-category="клипы музыкальные all">
+  <div class="video fade-in" data-category="клипы all">
     <div class="iframe-container">
       <iframe src="https://rutube.ru/play/embed/ce0a8a663f601e3fba623a80daca1013/" loading="lazy"></iframe>
     </div>
     <p>𝗥𝘂𝘀𝘀𝗶𝗮𝗻 𝗞𝗶𝘀𝘀 — Фрукт</p>
   </div>
 
-  <div class="video fade-in" data-category="клипы музыкальные all">
+  <div class="video fade-in" data-category="клипы клипы музыкальные all">
     <div class="iframe-container">
       <iframe src="https://rutube.ru/play/embed/23541bbca042cbf67d456db66329a7d2/" loading="lazy"></iframe>
     </div>
@@ -1052,35 +1071,47 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     <p>Тизер к курсу Андрея Курпатова</p>
   </div>
-  <div class="video fade-in" data-category="свадебное свадебные-фильмы all">
+  <div class="video fade-in" data-category="свадебные-тизеры свадебное событийное all">
   <div class="iframe-container">
     <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239119&hd=1" loading="lazy" allowfullscreen></iframe>
   </div>
-  <p>Свадебный фильм 1</p>
+  <p>Свадебный тизер 1</p>
 </div>
-<div class="video fade-in" data-category="свадебное свадебные-фильмы all">
+<div class="video fade-in" data-category="событийное свадебное свадебные-клипы all">
   <div class="iframe-container">
     <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239101&hd=1" loading="lazy" allowfullscreen></iframe>
   </div>
-  <p>Свадебный фильм 2</p>
+  <p>Свадебный клип</p>
 </div>
-<div class="video fade-in" data-category="свадебное свадебные-фильмы all">
+<div class="video fade-in" data-category="событийное свадебное свадебные-фильмы all">
   <div class="iframe-container">
     <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239120&hd=1" loading="lazy" allowfullscreen></iframe>
   </div>
-  <p>Свадебный фильм 3</p>
+  <p>Свадебный фильм 1</p>
 </div>
-<div class="video fade-in" data-category="свадебное свадебные-фильмы all">
+<div class="video fade-in" data-category="событийное свадебное свадебные-фильмы all">
   <div class="iframe-container">
     <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239096&hd=1" loading="lazy" allowfullscreen></iframe>
   </div>
-  <p>Свадебный фильм 4</p>
+  <p>Свадебный фильм 2</p>
 </div>
-<div class="video fade-in" data-category="свадебное свадебные-фильмы all">
+<div class="video fade-in" data-category="событийное свадебное свадебные-фильмы all">
   <div class="iframe-container">
     <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239095&hd=1" loading="lazy" allowfullscreen></iframe>
   </div>
-  <p>Свадебный фильм 5</p>
+  <p>Свадебный фильм 3</p>
+</div>
+<div class="video fade-in" data-category="событийное свадебное свадебные-фильмы all">
+  <div class="iframe-container">
+    <iframe src="https://vkvideo.ru/video_ext.php?oid=-62737535&id=456239128&hd=2" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p>Свадебный фильм 4</p>
+</div>
+  <div class="video fade-in" data-category="свадебные-тизеры свадебное событийное all">
+  <div class="iframe-container">
+    <iframe src="https://vk.com/video_ext.php?oid=-62737535&id=456239122&hd=2" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p>Свадебный тизер 2</p>
 </div>
 </div>
 
@@ -1198,7 +1229,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const filter = btn.dataset.filter;
       videos.forEach(v => {
         const cat = v.dataset.category;
-        const match = (filter === 'all' || cat === filter);
+        const match = (filter === 'all' || cat.split(' ').includes(filter));
         v.dataset.visible = match ? 'true' : 'false';
       });
       expanded = false;
@@ -1267,6 +1298,28 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.src = "";
   });
 });
+const videos = document.querySelectorAll('.video-container');
+
+videos.forEach(video => {
+    video.addEventListener('click', () => {
+        if (video.classList.contains('is-expanded')) return; // Игнорируем второй клик
+
+        // Включаем размытие и затемнение для всей страницы
+        document.body.classList.add('page-blurred');
+
+        // Масштабируем активное видео
+        video.classList.add('is-expanded');
+
+        // Закрываем по следующему клику
+        video.addEventListener('click', closeExpandedVideo, { once: true });
+    });
+});
+
+function closeExpandedVideo(e) {
+    const container = e.currentTarget;
+    container.classList.remove('is-expanded');
+    document.body.classList.remove('page-blurred');
+}
 </script>
 <?php get_footer(); ?>
 
